@@ -11,17 +11,6 @@ requires-python = ">=3.11"
 license = "Apache-2.0"
 license-files = ["src/LICENSE-2.0.txt"]
 authors = [{name = "Suil Hwang", email = "av600md@gmail.com"}]
-keywords = ["graph", "planar", "quadrangulation", "plantri", "SQS", "enumeration"]
-classifiers = [
-    "Intended Audience :: Science/Research",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Topic :: Scientific/Engineering :: Mathematics",
-]
-
-[project.optional-dependencies]
-dev = ["pytest", "pytest-cov"]
 
 [project.urls]
 Homepage = "https://github.com/suil-hwang/pyplantri"
@@ -31,13 +20,10 @@ minimum-version = "build-system.requires"
 wheel.install-dir = "pyplantri"
 wheel.packages = []
 wheel.py-api = "py3"
-editable.rebuild = true
+editable.rebuild = false
 build-dir = "build/{wheel_tag}"
 
 [tool.scikit-build.wheel.force-include]
 "__init__.py" = "pyplantri/__init__.py"
 "plantri.py" = "pyplantri/plantri.py"
 "plane_graph_cache.py" = "pyplantri/plane_graph_cache.py"
-
-[tool.pyrefly]
-search-path = [".."]
